@@ -197,6 +197,20 @@ a:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
 .vantage .go:hover { filter: brightness(1.08); }
 .vantage .go:active { transform: scale(.98); }
 .vantage .go svg { width: 18px; height: 18px; }
+.vantage .player {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  max-width: 100%;
+  margin-top: 4px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--brand-deep);
+}
+.vantage .player iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.vantage .links { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 18px; margin-top: 4px; }
+.vantage .links .go { margin-top: 0; }
+.vantage .alt { color: var(--brand); font-weight: 600; font-size: 15px; text-decoration: none; }
+.vantage .alt:hover { text-decoration: underline; }
 
 @media (prefers-reduced-motion: no-preference) {
   .card { animation: rise .5s cubic-bezier(.2,.8,.2,1) both; }
@@ -244,13 +258,19 @@ a:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
   </ul>
 
   <section class="vantage" aria-labelledby="vantage-title">
-    <span class="eyebrow">Vantage by iDecide</span>
-    <h2 id="vantage-title">Presentations your prospects actually finish</h2>
-    <p>Personalized, interactive presentations that let viewers choose what they see. You get notified when someone watches, who it was and how it ended.</p>
-    <a class="go" href="https://getidecide.com/vantage/" target="_blank" rel="noopener">
-      Sign up for Vantage
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-    </a>
+    <span class="eyebrow">Partner with iDecide</span>
+    <h2 id="vantage-title">See the opportunity in a few minutes</h2>
+    <p>This interactive presentation walks you through what it looks like to partner with iDecide. You pick the parts you want to see. It's built with Vantage, so you'll experience the product firsthand while you watch.</p>
+    <div class="player">
+      <iframe src="https://umustsee.net/TJM2MI" title="iDecide partner presentation" allow="autoplay; fullscreen" allowfullscreen></iframe>
+    </div>
+    <div class="links">
+      <a class="go" href="https://umustsee.net/TJM2MI" target="_blank" rel="noopener">
+        Watch full screen
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+      </a>
+      <a class="alt" href="https://getidecide.com/vantage/" target="_blank" rel="noopener">Sign up for Vantage</a>
+    </div>
   </section>
 </main>
 </body>
